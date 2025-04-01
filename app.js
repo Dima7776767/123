@@ -4,14 +4,11 @@ const fs = require('fs');
 const path = require('path');
 
 const server = http.createServer((req, res) => {
-  // Маршрутизация
   if (req.url === '/') {
     serveFile(res, 'views/index.html', 'text/html');
-  } 
-  else if (req.url === '/style.css') {
+  } else if (req.url === '/style.css') {
     serveFile(res, 'public/style.css', 'text/css');
-  }
-  else {
+  } else {
     res.writeHead(404);
     res.end('Not Found');
   }

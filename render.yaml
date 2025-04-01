@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: my-js-site  # имя вашего сайта
+    env: node
+    buildCommand: ""  # без сборки (чистый Node.js)
+    startCommand: node app.js
